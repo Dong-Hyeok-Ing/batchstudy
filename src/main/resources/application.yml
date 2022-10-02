@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: mysql
+
+---
+spring:
+  config:
+    activate:
+      on-profile: mysql
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306?BootDB/serverTimezone=Asia/Seoul&useSSL=false
+      username: bootuser
+      password: boot1234
+      driver-class-name: com.mysql.jdbc.Driver
+
+  batch:
+    jdbc:
+      initialize-schema: always
