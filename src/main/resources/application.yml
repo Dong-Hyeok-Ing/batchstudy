@@ -1,18 +1,16 @@
 spring:
-  profiles:
-    active: mysql
-
----
-spring:
-  config:
-    activate:
-      on-profile: mysql
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://localhost:3306?BootDB/serverTimezone=Asia/Seoul&useSSL=false
-      username: bootuser
-      password: boot1234
-      driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3307/BootingDB?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    #MacBook    url: jdbc:mysql://127.0.0.1:3306/BootDB?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: bootuser
+    password: boot1234
+
+#  datasource:
+
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: bootuser
+#    password: boot1234
 
   batch:
     jdbc:
