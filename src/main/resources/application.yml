@@ -6,12 +6,6 @@ spring:
     username: bootuser
     password: boot1234
 
-#  datasource:
-
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    username: bootuser
-#    password: boot1234
-
   batch:
     jdbc:
       initialize-schema: always
